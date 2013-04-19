@@ -6,7 +6,7 @@
         ' GET: /
         Function Index() As JsonResult
             Dim p As New Post
-            p.title = "Post teste do servidor"
+            p._title = "Post teste do servidor"
             p.content = "Conteudo teste vindo do servidor"
             Return Json(p, JsonRequestBehavior.AllowGet)
             'Return View()
@@ -27,7 +27,7 @@
         <HttpGet()> _
         Function Post() As JsonResult
             Dim p As New Post
-            p.title = "Post teste do servidor"
+            p._title = "Post teste do servidor"
             p.content = "Conteudo teste vindo do servidor"
             Return Json(p, JsonRequestBehavior.AllowGet)
             'Return View()
